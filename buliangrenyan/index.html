@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不良人研究所导航-不良人研究所资源导航_国漫不良人资料站入口</title>
+<meta name="description" content="不良人研究所导航是面向国漫《画江湖之不良人》爱好者的资源导航首页，汇集剧情资料、角色档案、设定考据与同好社区入口，帮助访客快速找到需要的内容方向。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f2a'/%3E%3Cpath d='M14 44 L32 14 L50 44 Z' fill='none' stroke='%23d8a24a' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='36' r='5' fill='%23d8a24a'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#1b1f2a;
+    --ink-2:#2a3040;
+    --paper:#f6f2e9;
+    --paper-2:#efe9db;
+    --gold:#c08a2e;
+    --gold-soft:#e0b463;
+    --red:#9d3b2f;
+    --text:#232733;
+    --muted:#5d6272;
+    --line:rgba(35,39,51,.14);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+    background:var(--paper);
+    color:var(--text);
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px;}
+
+  /* 页头 */
+  header.site{
+    background:var(--ink);
+    color:#f3ecdd;
+    border-bottom:3px solid var(--gold);
+  }
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+    padding:16px 0;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand-mark{
+    width:44px;height:44px;flex:0 0 44px;
+    border-radius:12px;background:#242a38;
+    display:grid;place-items:center;border:1px solid rgba(224,180,99,.45);
+  }
+  .brand-text{
+    font-size:1.18rem;font-weight:700;letter-spacing:.06em;
+    color:#f6efdf;
+  }
+  .brand-sub{display:block;font-size:.7rem;letter-spacing:.22em;color:var(--gold-soft);font-weight:400;font-family:system-ui,sans-serif;}
+  nav.main{display:flex;gap:6px;flex-wrap:wrap;}
+  nav.main a{
+    text-decoration:none;font-size:.92rem;padding:7px 12px;border-radius:999px;
+    color:#dcd5c6;font-family:system-ui,"Microsoft YaHei",sans-serif;
+    transition:background .18s,color .18s;
+  }
+  nav.main a:hover,nav.main a:focus-visible{background:rgba(224,180,99,.18);color:#fff;outline:none;}
+
+  /* 首屏 */
+  .hero{
+    background:
+      radial-gradient(900px 380px at 82% -10%,rgba(192,138,46,.20),transparent 70%),
+      linear-gradient(180deg,#1b1f2a 0%,#232a38 68%,#2a3040 100%);
+    color:#f2ecdd;
+    padding:52px 0 58px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(224,180,99,.6),transparent);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:38px;align-items:center;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:system-ui,"Microsoft YaHei",sans-serif;
+    font-size:.78rem;letter-spacing:.18em;color:var(--gold-soft);
+    border:1px solid rgba(224,180,99,.4);border-radius:999px;padding:5px 14px;
+    margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(1.75rem,4.2vw,2.75rem);
+    line-height:1.3;margin:0 0 16px;letter-spacing:.02em;font-weight:700;
+  }
+  .hero p.lead{
+    font-size:1.02rem;color:#cfc9ba;margin:0 0 26px;max-width:34em;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:11px 22px;border-radius:999px;text-decoration:none;
+    font-family:system-ui,"Microsoft YaHei",sans-serif;font-size:.94rem;
+    border:1px solid transparent;transition:transform .16s,background .18s,color .18s;
+  }
+  .btn-primary{background:var(--gold);color:#1b1f2a;font-weight:600;}
+  .btn-primary:hover{background:var(--gold-soft);transform:translateY(-1px);}
+  .btn-ghost{border-color:rgba(224,180,99,.5);color:#f0e8d6;}
+  .btn-ghost:hover{background:rgba(224,180,99,.14);}
+  .hero-figure{
+    background:rgba(255,255,255,.04);border:1px solid rgba(224,180,99,.22);
+    border-radius:18px;padding:18px;
+  }
+  .hero-figure figcaption{
+    font-family:system-ui,"Microsoft YaHei",sans-serif;
+    font-size:.76rem;color:#a9a392;letter-spacing:.1em;margin-top:10px;text-align:center;
+  }
+
+  /* 通用区块 */
+  section{padding:56px 0;}
+  section.alt{background:var(--paper-2);}
+  .sec-head{max-width:46em;margin-bottom:30px;}
+  .sec-tag{
+    font-family:system-ui,"Microsoft YaHei",sans-serif;
+    font-size:.76rem;letter-spacing:.2em;color:var(--gold);font-weight:600;
+  }
+  h2{
+    font-size:clamp(1.3rem,2.6vw,1.65rem);
+    margin:6px 0 12px;letter-spacing:.01em;line-height:1.45;
+  }
+  .sec-head p{margin:0;color:var(--muted);font-size:.97rem;}
+
+  /* 卡片网格 */
+  .grid{display:grid;gap:18px;}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .card{
+    background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 20px;display:flex;flex-direction:column;
+    box-shadow:0 1px 0 rgba(27,31,42,.03);
+    transition:border-color .18s,box-shadow .18s,transform .18s;
+  }
+  .card:hover{border-color:rgba(192,138,46,.55);box-shadow:0 8px 22px rgba(27,31,42,.07);transform:translateY(-2px);}
+  .card .ico{
+    width:36px;height:36px;border-radius:10px;background:rgba(192,138,46,.13);
+    display:grid;place-items:center;margin-bottom:14px;
+  }
+  .card h3{font-size:1.05rem;margin:0 0 8px;letter-spacing:.01em;}
+  .card p{margin:0;font-size:.93rem;color:var(--muted);}
+  .card ul{margin:10px 0 0;padding-left:1.1em;font-size:.9rem;color:var(--muted);}
+  .card ul li{margin:4px 0;}
+  .card .go{
+    margin-top:16px;font-family:system-ui,"Microsoft YaHei",sans-serif;
+    font-size:.86rem;color:var(--red);text-decoration:none;font-weight:600;
+    align-self:flex-start;
+  }
+  .card .go:hover{text-decoration:underline;}
+
+  /* 列表区 */
+  .list-panel{
+    background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);
+    padding:8px 24px;
+  }
+  .list-panel article{
+    padding:20px 0;border-bottom:1px dashed var(--line);
+    display:grid;grid-template-columns:1fr auto;gap:8px 18px;align-items:baseline;
+  }
+  .list-panel article:last-child{border-bottom:none;}
+  .list-panel h3{font-size:1rem;margin:0 0 4px;}
+  .list-panel p{margin:0;font-size:.92rem;color:var(--muted);grid-column:1;}
+  .list-panel .meta{
+    font-family:system-ui,"Microsoft YaHei",sans-serif;
+    font-size:.76rem;color:var(--gold);letter-spacing:.08em;white-space:nowrap;
+  }
+
+  /* 筛选 */
+  .filter-bar{
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+    margin-bottom:22px;padding:14px 16px;border-radius:12px;
+    background:#fffdf8;border:1px solid var(--line);
+  }
+  .filter-bar label{
+    font-family:system-ui,"Microsoft YaHei",sans-serif;
+    font-size:.84rem;color:var(--muted);
+  }
+  .filter-bar input[type="search"]{
+    flex:1 1 220px;min-width:0;padding:9px 14px;border-radius:999px;
+    border:1px solid var(--line);background:var(--paper);
+    font-family:system-ui,"Microsoft YaHei",sans-serif;font-size:.9rem;color:var(--text);
+  }
+  .filter-bar input[type="search"]:focus{outline:2px solid rgba(192,138,46,.5);outline-offset:1px;}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;}
+  .chip{
+    font-family:system-ui,"Microsoft YaHei",sans-serif;font-size:.82rem;
+    padding:6px 14px;border-radius:999px;border:1px solid var(--line);
+    background:var(--paper);color:var(--muted);cursor:pointer;
+    transition:background .16s,color .16s,border-color .16s;
+  }
+  .chip[aria-pressed="true"]{background:var(--ink);color:#f2ecdd;border-color:var(--ink);}
+  .empty{
+    display:none;padding:26px;text-align:center;color:var(--muted);
+    font-size:.92rem;border:1px dashed var(--line);border-radius:12px;
+  }
+
+  /* 下载 */
+  .download-box{
+    display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;
+    background:var(--ink);color:#f2ecdd;border-radius:18px;padding:30px 32px;
+    border:1px solid rgba(224,180,99,.25);
+  }
+  .download-box h2{color:#f8f2e2;margin-top:0;}
+  .download-box p{margin:0;color:#c8c2b2;font-size:.94rem;max-width:40em;}
+  .btn-disabled{
+    background:rgba(224,180,99,.22);color:#e8dcc0;border:1px solid rgba(224,180,99,.45);
+    pointer-events:none;cursor:default;font-weight:600;
+  }
+  .download-note{
+    font-family:system-ui,"Microsoft YaHei",sans-serif;
+    font-size:.76rem;color:#9b9585;margin-top:10px;letter-spacing:.04em;
+  }
+
+  /* 页尾 */
+  footer.site{
+    background:#151922;color:#a9a392;padding:38px 0 30px;
+    font-family:system-ui,"Microsoft YaHei",sans-serif;font-size:.86rem;
+    border-top:3px solid var(--gold);
+  }
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px;}
+  footer.site strong{color:#e6ddc9;display:block;margin-bottom:8px;font-size:.92rem;}
+  footer.site a{color:#c2bcab;text-decoration:none;}
+  footer.site a:hover{color:var(--gold-soft);text-decoration:underline;}
+  footer.site ul{list-style:none;margin:0;padding:0;}
+  footer.site li{margin:5px 0;}
+  .foot-bottom{
+    margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    font-size:.78rem;color:#7e7a6d;letter-spacing:.03em;
+  }
+
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:26px;}
+    .hero-figure{order:-1;max-width:340px;}
+    .g3{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .download-box{grid-template-columns:1fr;}
+  }
+  @media (max-width:620px){
+    body{font-size:15.5px;}
+    .hero{padding:38px 0 44px;}
+    section{padding:42px 0;}
+    .g3,.g2{grid-template-columns:1fr;}
+    .list-panel{padding:4px 18px;}
+    .list-panel article{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .topbar{padding:14px 0;gap:12px;}
+    nav.main a{padding:6px 10px;font-size:.86rem;}
+    .download-box{padding:24px 22px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap topbar">
+    <a class="brand" href="#top" aria-label="不良人研究所导航 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 64 64" role="img" aria-label="不良人研究所导航 标识">
+          <path d="M12 46 L32 12 L52 46 Z" fill="none" stroke="#e0b463" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="32" cy="37" r="5.5" fill="#e0b463"/>
+          <path d="M20 52 H44" stroke="#9d3b2f" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>
+        <span class="brand-text">不良人研究所导航</span>
+        <span class="brand-sub">BU LIANG REN RESEARCH INDEX</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#directions">导航方向</a>
+      <a href="#index">资料索引</a>
+      <a href="#howto">使用说明</a>
+      <a href="#download">下载</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">国漫资料 · 导航首页</span>
+        <h1 id="hero-title">不良人研究所导航</h1>
+        <p class="lead">把散落在各处的《画江湖之不良人》资料收进一张清单：剧情脉络、角色档案、势力设定与同好讨论，都能从这里找到入口。不良人研究所导航不生产内容，只负责把方向指清楚。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#index">进入资料索引
+            <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#1b1f2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#directions">查看导航方向</a>
+        </div>
+      </div>
+      <figure class="hero-figure" aria-hidden="true">
+        <svg viewBox="0 0 260 200" role="img" aria-label="层叠的资料检索示意插画">
+          <rect x="18" y="24" width="224" height="152" rx="12" fill="#202634" stroke="#3a4256"/>
+          <rect x="38" y="46" width="90" height="9" rx="4.5" fill="#e0b463"/>
+          <rect x="38" y="66" width="150" height="7" rx="3.5" fill="#4a5166"/>
+          <rect x="38" y="84" width="120" height="7" rx="3.5" fill="#4a5166"/>
+          <rect x="38" y="110" width="60" height="44" rx="8" fill="#2b3244" stroke="#c08a2e"/>
+          <rect x="106" y="110" width="60" height="44" rx="8" fill="#2b3244" stroke="#4a5166"/>
+          <rect x="174" y="110" width="60" height="44" rx="8" fill="#2b3244" stroke="#4a5166"/>
+          <circle cx="68" cy="132" r="8" fill="none" stroke="#e0b463" stroke-width="3"/>
+          <path d="M74 138l7 7" stroke="#e0b463" stroke-width="3" stroke-linecap="round"/>
+          <path d="M136 122h30M136 134h22M136 146h26" stroke="#6d7488" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M204 122h30M204 134h18M204 146h26" stroke="#6d7488" stroke-width="3.4" stroke-linecap="round"/>
+        </svg>
+        <figcaption>检索 · 分类 · 直达</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 导航方向 -->
+  <section id="directions" aria-labelledby="dir-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">NAVIGATION DIRECTIONS</span>
+        <h2 id="dir-title">不良人研究所导航收哪几类内容</h2>
+        <p>按访问者最常提的问题划分，每个方向对应一种查找动作：想知道剧情走了哪一步、想认清一个人物、想核对一条设定，或者想找同好聊上两句。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10" stroke="#c08a2e" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>剧情脉络</h3>
+          <p>按季与篇章梳理主线走向，标注关键转折出现的位置，方便回看或补看时定位。</p>
+          <ul>
+            <li>分季梗概与时间线</li>
+            <li>关键转折节点说明</li>
+          </ul>
+          <a class="go" href="#index">查看对应条目 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="#c08a2e" stroke-width="2.2"/><path d="M4 21c1.6-4.2 4.4-6.2 8-6.2s6.4 2 8 6.2" fill="none" stroke="#c08a2e" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>角色档案</h3>
+          <p>从身份、所属势力到重要经历，把人物关系摆在一起看，减少对号入座时的混淆。</p>
+          <ul>
+            <li>主要人物与阵营归属</li>
+            <li>人物关系与立场变化</li>
+          </ul>
+          <a class="go" href="#index">查看对应条目 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4.4-3.4 7.4-8 8-4.6-.6-8-3.6-8-8V7z" fill="none" stroke="#c08a2e" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>势力与设定</h3>
+          <p>整理门派、组织与江湖格局的背景说明，把设定类名词放进同一套解释框架里。</p>
+          <ul>
+            <li>势力分布与立场</li>
+            <li>专有名词与背景设定</li>
+          </ul>
+          <a class="go" href="#index">查看对应条目 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2.5" fill="none" stroke="#c08a2e" stroke-width="2.2"/><path d="M8 21h8" stroke="#c08a2e" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>视听资料</h3>
+          <p>收录片头片尾、配乐与影像素材方向，方便按类型而不是按平台去找。</p>
+          <ul>
+            <li>影像与配乐分类</li>
+            <li>素材出处标注方式</li>
+          </ul>
+          <a class="go" href="#index">查看对应条目 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24"><path d="M4 6h16v10H9l-5 4z" fill="none" stroke="#c08a2e" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>同好社区</h3>
+          <p>汇总讨论区、考据帖与二创聚集地，按内容侧重点区分，不用逐个试错。</p>
+          <ul>
+            <li>讨论与考据方向</li>
+            <li>二创作品的聚集入口</li>
+          </ul>
+          <a class="go" href="#index">查看对应条目 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24"><path d="M5 4h9l5 5v11H5z" fill="none" stroke="#c08a2e" stroke-width="2.2" stroke-linejoin="round"/><path d="M14 4v5h5" fill="none" stroke="#c08a2e" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>工具与整理</h3>
+          <p>提供观看顺序、补番清单与资料整理方式的说明，帮初次接触的访客少走弯路。</p>
+          <ul>
+            <li>观看顺序建议</li>
+            <li>资料整理与备份思路</li>
+          </ul>
+          <a class="go" href="#index">查看对应条目 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 资料索引 -->
+  <section id="index" class="alt" aria-labelledby="index-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">RESOURCE INDEX</span>
+        <h2 id="index-title">资料索引：按用途筛选入口</h2>
+        <p>下面的条目按内容用途归组。可以用关键词搜索，也可以点选分类缩小范围；不良人研究所导航只对条目做归类与说明，资料本身仍以原出处为准。</p>
+      </div>
+
+      <div class="filter-bar" role="search">
+        <label for="q">搜索条目</label>
+        <input type="search" id="q" placeholder="如：角色、势力、观看顺序" autocomplete="off">
+        <div class="chips" role="group" aria-label="分类筛选">
+          <button class="chip" type="button" data-cat="all" aria-pressed="true">全部</button>
+          <button class="chip" type="button" data-cat="剧情" aria-pressed="false">剧情</button>
+          <button class="chip" type="button" data-cat="角色" aria-pressed="false">角色</button>
+          <button class="chip" type="button" data-cat="设定" aria-pressed="false">设定</button>
+          <button class="chip" type="button" data-cat="社区" aria-pressed="false">社区</button>
+        </div>
+      </div>
+
+      <div class="list-panel" id="entry-list">
+        <article data-cat="剧情" data-key="分季梗概 时间线 主线">
+          <div>
+            <h3>分季剧情梗概与时间线</h3>
+            <p>按播出季划分主线段落，标注每季开头承接什么、结尾留下什么悬念，适合回看前先定位。</p>
+          </div>
+          <span class="meta">剧情</span>
+        </article>
+        <article data-cat="剧情" data-key="观看顺序 补番 新人">
+          <div>
+            <h3>新人观看顺序说明</h3>
+            <p>说明正片与外传类内容的先后关系，并给出两种补看路径：按播出顺序或按时间线顺序。</p>
+          </div>
+          <span class="meta">剧情</span>
+        </article>
+        <article data-cat="角色" data-key="角色档案 阵营 人物关系">
+          <div>
+            <h3>主要角色档案与阵营归属</h3>
+            <p>以人物为单位记录身份、所属势力与重要经历，人物关系单独列出，便于交叉对照。</p>
+          </div>
+          <span class="meta">角色</span>
+        </article>
+        <article data-cat="角色" data-key="立场变化 人物关系 冲突">
+          <div>
+            <h3>人物立场变化梳理</h3>
+            <p>整理角色在关键事件前后的立场差异，帮助理解冲突的来由，而不只是记住结局。</p>
+          </div>
+          <span class="meta">角色</span>
+        </article>
+        <article data-cat="设定" data-key="势力 门派 组织 江湖格局">
+          <div>
+            <h3>势力分布与江湖格局</h3>
+            <p>把门派、组织与朝堂线索放在同一张关系图上，说明各自的目标与彼此之间的牵制。</p>
+          </div>
+          <span class="meta">设定</span>
+        </article>
+        <article data-cat="设定" data-key="专有名词 背景 设定考据">
+          <div>
+            <h3>专有名词与背景考据</h3>
+            <p>对反复出现的名词做集中解释，注明属于剧情内设定还是历史背景借用，避免概念混用。</p>
+          </div>
+          <span class="meta">设定</span>
+        </article>
+        <article data-cat="社区" data-key="讨论区 考据帖 二创">
+          <div>
+            <h3>讨论区与考据帖入口</h3>
+            <p>按内容侧重点区分讨论场所：偏剧情推演的、偏设定考据的、偏二创交流的，各归其位。</p>
+          </div>
+          <span class="meta">社区</span>
+        </article>
+        <article data-cat="社区" data-key="素材 配乐 影像 出处">
+          <div>
+            <h3>影像与配乐素材方向</h3>
+            <p>汇总素材类内容的查找方向，并提示核对出处与使用范围，转载前先确认原发布说明。</p>
+          </div>
+          <span class="meta">社区</span>
+        </article>
+      </div>
+      <p class="empty" id="empty-tip">没有匹配的条目，换个关键词或切回“全部”试试。</p>
+    </div>
+  </section>
+
+  <!-- 使用说明 -->
+  <section id="howto" aria-labelledby="howto-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">HOW TO USE</span>
+        <h2 id="howto-title">怎么用这份不良人研究所导航</h2>
+        <p>导航的价值在于减少绕路。下面三步适用于大多数访问场景，也说明了本站信息的边界。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="#c08a2e" stroke-width="2.2"/><path d="M16 16l5 5" stroke="#c08a2e" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          <h3>第一步：先定问题</h3>
+          <p>是想补剧情、认人物，还是核对一条设定？问题越具体，索引里的搜索词就越好写。</p>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4" stroke="#c08a2e" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          <h3>第二步：按类缩小</h3>
+          <p>选择分类标签，再在结果里挑条目。分类只是用途上的区分，不表示内容的重要程度。</p>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24"><path d="M12 4v12M7 11l5 5 5-5" fill="none" stroke="#c08a2e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20h14" stroke="#c08a2e" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+          <h3>第三步：回到出处</h3>
+          <p>条目说明只做指引，具体信息以原发布内容为准。遇到版本差异，优先相信来源明确的一方。</p>
+        </article>
+      </div>
+      <div class="list-panel" style="margin-top:22px;">
+        <article>
+          <div>
+            <h3>关于本站的信息边界</h3>
+            <p>不良人研究所导航是人工归类的入口清单，不转载正片，也不代替官方发布。条目描述依据公开可见的内容整理，若原出处有更新，以原出处为准；分类调整会在本页同步。</p>
+          </div>
+          <span class="meta">说明</span>
+        </article>
+        <article>
+          <div>
+            <h3>适合谁访问</h3>
+            <p>刚接触《画江湖之不良人》想理清顺序的新观众、回看时想快速定位剧情的老观众，以及需要核对人物与设定的考据爱好者。三类人对应不同的入口，不必都从第一项读起。</p>
+          </div>
+          <span class="meta">说明</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download" aria-labelledby="dl-title">
+    <div class="wrap">
+      <div class="download-box">
+        <div>
+          <h2 id="dl-title">下载导航清单</h2>
+          <p>把本页的条目整理成可离线查阅的清单，方便对照使用。文件尚在准备中，上线后此处会替换为真实地址，当前入口暂不可用。</p>
+          <p class="download-note">当前状态：准备中 · 暂未开放下载</p>
+        </div>
+        <a class="btn btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <strong>不良人研究所导航</strong>
+        <p style="margin:0;color:#8f8a7c;">面向《画江湖之不良人》爱好者的资料入口清单，按用途归类，指向原出处。</p>
+      </div>
+      <div>
+        <strong>页内导航</strong>
+        <ul>
+          <li><a href="#directions">导航方向</a></li>
+          <li><a href="#index">资料索引</a></li>
+          <li><a href="#howto">使用说明</a></li>
+          <li><a href="#download">下载</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>内容分类</strong>
+        <ul>
+          <li><a href="#index">剧情与观看顺序</a></li>
+          <li><a href="#index">角色与阵营</a></li>
+          <li><a href="#index">势力与设定</a></li>
+          <li><a href="#index">社区与素材</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>不良人研究所导航 · 资料归类以原出处为准</span>
+      <span>入口清单 · 人工整理</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('q');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var items = Array.prototype.slice.call(document.querySelectorAll('#entry-list article'));
+  var empty = document.getElementById('empty-tip');
+  var cat = 'all';
+
+  function apply(){
+    var kw = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(el){
+      var okCat = (cat === 'all') || (el.getAttribute('data-cat') === cat);
+      var hay = (el.textContent + ' ' + (el.getAttribute('data-key') || '')).toLowerCase();
+      var okKw = !kw || hay.indexOf(kw) !== -1;
+      var show = okCat && okKw;
+      el.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      cat = btn.getAttribute('data-cat');
+      chips.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      apply();
+    });
+  });
+
+  input.addEventListener('input', apply);
+})();
+</script>
+</body>
+  </html>
