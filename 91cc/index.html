@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91cc官网入口-91cc官网入口导航_91cc入口地址与访问指引</title>
+<meta name="description" content="91cc官网入口导航页，整理91cc官网入口的访问路径、入口地址核对方法与常见访问问题说明，帮助访问者快速找到正确的91cc官网入口页面。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2b3d'/%3E%3Cpath d='M18 40V24h10c6 0 9 3 9 8s-3 8-9 8H18z' fill='none' stroke='%235fd3c4' stroke-width='4'/%3E%3Cpath d='M40 24l8 16M48 24l-8 16' stroke='%23f0b429' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#10222e;
+  --ink-soft:#3d5566;
+  --paper:#f6f8f7;
+  --card:#ffffff;
+  --line:#dde5e3;
+  --deep:#0f2b3d;
+  --deep-2:#153a50;
+  --teal:#1f9d8f;
+  --teal-soft:#e2f3f0;
+  --gold:#d9a02b;
+  --gold-soft:#fbf1da;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(15,43,61,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;min-height:66px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.brand-mark{width:38px;height:38px;flex:0 0 auto}
+.brand-text{
+  font-size:18px;font-weight:700;letter-spacing:.5px;white-space:nowrap;
+}
+.brand-text small{
+  display:block;font-size:11px;font-weight:400;letter-spacing:2px;
+  color:#8fbfb9;text-transform:uppercase;
+}
+.nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.nav a{
+  color:#cfe0de;font-size:14.5px;padding:8px 12px;border-radius:8px;
+  transition:.2s;
+}
+.nav a:hover,.nav a:focus-visible{background:rgba(95,211,196,.16);color:#fff;outline:none}
+.nav .nav-cta{
+  background:var(--teal);color:#04211d;font-weight:700;
+  padding:9px 16px;border-radius:999px;
+}
+.nav .nav-cta:hover{background:#2ec0af;color:#04211d}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(circle at 82% 18%,rgba(95,211,196,.20),transparent 46%),
+    radial-gradient(circle at 12% 88%,rgba(217,160,43,.16),transparent 44%),
+    linear-gradient(160deg,#0f2b3d 0%,#153a50 62%,#12313f 100%);
+  color:#eaf3f2;
+  padding:58px 0 64px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto -60px -120px auto;
+  width:340px;height:340px;border-radius:50%;
+  border:1px solid rgba(95,211,196,.22);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .9fr;gap:44px;align-items:center;
+  position:relative;z-index:2;
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1.5px;color:#8fded1;
+  background:rgba(95,211,196,.13);
+  border:1px solid rgba(95,211,196,.32);
+  padding:5px 13px;border-radius:999px;margin-bottom:18px;
+}
+.kicker svg{width:14px;height:14px}
+h1{
+  font-size:clamp(28px,4.4vw,46px);
+  line-height:1.22;font-weight:800;letter-spacing:.5px;color:#fff;
+  word-break:break-word;
+}
+.hero-lead{
+  margin-top:18px;font-size:16.5px;color:#c3d8d5;max-width:34em;
+}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 24px;border-radius:10px;font-size:15.5px;font-weight:700;
+  transition:.2s;border:1px solid transparent;cursor:pointer;
+}
+.btn svg{width:17px;height:17px}
+.btn-primary{background:var(--teal);color:#052420}
+.btn-primary:hover{background:#2ec0af;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:#d9ece8;border-color:rgba(217,236,232,.35)}
+.btn-ghost:hover{background:rgba(217,236,232,.10);border-color:rgba(217,236,232,.6)}
+.hero-facts{
+  display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;
+  padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
+}
+.hero-facts div{font-size:13.5px;color:#9fbab6}
+.hero-facts strong{display:block;font-size:19px;color:#fff;font-weight:700;letter-spacing:.3px}
+.hero-art{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;padding:20px;
+}
+.hero-art svg{width:100%;height:auto}
+
+/* ---------- section base ---------- */
+section{padding:62px 0}
+.sec-head{max-width:44em;margin-bottom:34px}
+.sec-tag{
+  font-size:12.5px;letter-spacing:2px;color:var(--teal);
+  font-weight:700;text-transform:uppercase;margin-bottom:9px;
+}
+h2{
+  font-size:clamp(21px,2.6vw,28px);font-weight:800;
+  line-height:1.35;color:var(--deep);letter-spacing:.3px;
+}
+.sec-head p{margin-top:12px;color:var(--ink-soft);font-size:15.5px}
+h3{font-size:17px;font-weight:700;color:var(--deep);margin-bottom:8px}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;position:relative;overflow:hidden;
+}
+.step::before{
+  content:"";position:absolute;left:0;top:0;width:3px;height:100%;
+  background:linear-gradient(180deg,var(--teal),var(--gold));
+}
+.step-no{
+  font-size:12px;font-weight:800;letter-spacing:2px;color:var(--teal);
+  margin-bottom:10px;
+}
+.step p{color:var(--ink-soft);font-size:14.8px}
+
+/* ---------- checklist ---------- */
+.check-block{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:30px 30px 24px;
+}
+.check-list{list-style:none;display:grid;gap:14px;margin-top:6px}
+.check-list li{
+  display:flex;gap:13px;align-items:flex-start;
+  font-size:15.2px;color:var(--ink-soft);
+  padding-bottom:14px;border-bottom:1px dashed var(--line);
+}
+.check-list li:last-child{border-bottom:none;padding-bottom:0}
+.check-list li svg{width:20px;height:20px;flex:0 0 auto;margin-top:3px}
+.check-list strong{color:var(--deep)}
+
+/* ---------- faq ---------- */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.faq-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;
+}
+.faq-item p{color:var(--ink-soft);font-size:14.8px;margin-top:6px}
+
+/* ---------- guide / download ---------- */
+.guide{
+  background:linear-gradient(150deg,#0f2b3d,#153a50);
+  color:#e6f1ef;border-radius:18px;padding:40px 38px;
+  display:grid;grid-template-columns:1.4fr .8fr;gap:34px;align-items:center;
+}
+.guide h2{color:#fff}
+.guide p{color:#b9d1cd;margin-top:12px;font-size:15.2px}
+.guide .note{
+  margin-top:18px;font-size:13.5px;color:#8fb8b2;
+  border-left:2px solid var(--gold);padding-left:12px;
+}
+.dl-box{text-align:center}
+.dl-box .btn{width:100%;justify-content:center}
+.btn-disabled{
+  background:rgba(255,255,255,.10);color:#a9c5c1;
+  border:1px solid rgba(255,255,255,.18);
+  pointer-events:none;cursor:default;
+}
+.dl-box small{display:block;margin-top:12px;font-size:12.5px;color:#8fb8b2}
+
+/* ---------- related ---------- */
+.rel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rel-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 20px;transition:.2s;
+}
+.rel-card:hover{border-color:var(--teal);transform:translateY(-2px)}
+.rel-card .ic{
+  width:36px;height:36px;border-radius:9px;background:var(--teal-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.rel-card .ic svg{width:19px;height:19px}
+.rel-card h3{font-size:15.5px}
+.rel-card p{font-size:13.8px;color:var(--ink-soft);margin-top:5px}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:var(--deep);color:#a7c2be;
+  padding:42px 0 30px;font-size:14px;
+}
+.footer-top{
+  display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.10);
+}
+.footer-brand{max-width:26em}
+.footer-brand .brand{margin-bottom:12px}
+.footer-brand p{font-size:13.8px;color:#8fb0ac;line-height:1.85}
+.footer-links{display:flex;gap:52px;flex-wrap:wrap}
+.footer-links h4{
+  color:#e2efec;font-size:13.5px;font-weight:700;letter-spacing:1px;margin-bottom:12px;
+}
+.footer-links ul{list-style:none;display:grid;gap:8px}
+.footer-links a{color:#9dbab6;font-size:13.8px}
+.footer-links a:hover{color:#5fd3c4}
+.footer-bottom{
+  padding-top:22px;display:flex;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;font-size:12.8px;color:#7f9c98;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-art{order:-1;max-width:340px}
+  .steps{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+  .guide{grid-template-columns:1fr;padding:32px 26px}
+  .rel-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .wrap{padding:0 18px}
+  .header-inner{min-height:auto;padding:12px 0}
+  .nav{width:100%;gap:2px}
+  .nav a{font-size:13.5px;padding:7px 10px}
+  .nav .nav-cta{padding:8px 14px;margin-left:auto}
+  .hero{padding:40px 0 46px}
+  .hero-lead{font-size:15.5px}
+  .hero-actions .btn{flex:1 1 100%;justify-content:center}
+  .hero-facts{gap:18px}
+  section{padding:46px 0}
+  .check-block,.faq-item{padding:22px 20px}
+  .rel-grid{grid-template-columns:1fr}
+  .footer-links{gap:30px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="91cc官网入口 首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#14384c"/>
+        <path d="M18 40V24h10c6 0 9 3 9 8s-3 8-9 8H18z" fill="none" stroke="#5fd3c4" stroke-width="4"/>
+        <path d="M40 24l8 16M48 24l-8 16" stroke="#f0b429" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">91cc官网入口<small>ENTRY GUIDE</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#access">访问路径</a>
+      <a href="#check">入口核对</a>
+      <a href="#faq">常见问题</a>
+      <a href="#guide">使用须知</a>
+      <a href="#related">相关内容</a>
+      <a class="nav-cta" href="#access">前往入口</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+          入口导航 · 访问指引
+        </span>
+        <h1 id="hero-title">91cc官网入口</h1>
+        <p class="hero-lead">
+          本页围绕 91cc官网入口 这一访问需求，整理入口的查找方式、地址核对要点与常见访问问题的说明。若你正在寻找 91cc官网入口，可以先按下方路径逐项确认，再决定从哪个入口进入，避免中途跳转到相似页面。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#access">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            查看访问路径
+          </a>
+          <a class="btn btn-ghost" href="#check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>
+            入口核对清单
+          </a>
+        </div>
+        <div class="hero-facts">
+          <div><strong>3 步</strong>访问路径梳理</div>
+          <div><strong>5 项</strong>入口核对要点</div>
+          <div><strong>4 条</strong>常见问题说明</div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 240" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5fd3c4" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#1f9d8f" stop-opacity=".25"/>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="18" width="292" height="204" rx="14" fill="#0c2434" stroke="#255166" stroke-width="1.5"/>
+          <rect x="14" y="18" width="292" height="30" rx="14" fill="#163d51"/>
+          <circle cx="34" cy="33" r="5" fill="#5fd3c4"/>
+          <circle cx="52" cy="33" r="5" fill="#f0b429"/>
+          <circle cx="70" cy="33" r="5" fill="#3d6d7f"/>
+          <rect x="34" y="64" width="118" height="12" rx="6" fill="url(#g1)"/>
+          <rect x="34" y="86" width="172" height="8" rx="4" fill="#2b5568"/>
+          <rect x="34" y="102" width="140" height="8" rx="4" fill="#2b5568"/>
+          <rect x="34" y="130" width="78" height="28" rx="8" fill="#1f9d8f"/>
+          <rect x="122" y="130" width="78" height="28" rx="8" fill="#20495c" stroke="#3a6d80"/>
+          <rect x="34" y="176" width="252" height="1" fill="#2b5568"/>
+          <rect x="34" y="190" width="70" height="8" rx="4" fill="#2b5568"/>
+          <rect x="116" y="190" width="70" height="8" rx="4" fill="#2b5568"/>
+          <rect x="198" y="190" width="70" height="8" rx="4" fill="#2b5568"/>
+          <path d="M236 88l16 16 26-30" fill="none" stroke="#5fd3c4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS STEPS -->
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">访问路径</div>
+        <h2>从查找名称到进入页面，三步走完 91cc官网入口</h2>
+        <p>很多访问者卡在第一步：搜索到多个相似名称的页面，却无法判断哪个才是真正的 91cc官网入口。下面的路径把这件事拆成可执行的三个动作，顺序执行即可减少误入的几率。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="step-no">STEP 01</div>
+          <h3>先确认名称与拼写</h3>
+          <p>91cc官网入口 的关键字符是“91cc”与“官网入口”。搜索时保留完整写法，不要只看前缀相似的站点名称。名称中多出后缀、少一个字符，都可能指向不同页面。</p>
+        </article>
+        <article class="step">
+          <div class="step-no">STEP 02</div>
+          <h3>再核对域名与页面标题</h3>
+          <p>打开页面后，先看浏览器地址栏的域名是否与你此前记录的 91cc官网入口 域名一致，再看页面标题是否与名称对应。地址、标题、内容三者不一致时，建议直接退出重找。</p>
+        </article>
+        <article class="step">
+          <div class="step-no">STEP 03</div>
+          <h3>最后记录可用入口</h3>
+          <p>确认无误后，将 91cc官网入口 地址加入浏览器书签或备忘录，下次直接从收藏进入，比每次重新检索更稳妥，也能减少被中途跳转页误导的可能。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section id="check" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">入口核对</div>
+        <h2>五个核对要点，判断 91cc官网入口 是否可信</h2>
+        <p>判断一个入口是否值得使用，不靠感觉，靠可观察的细节。下面五点都能在打开页面的前十几秒内完成核对。</p>
+      </div>
+      <div class="check-block">
+        <ul class="check-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+            <span><strong>地址栏一致：</strong>域名与记忆中或此前记录的 91cc官网入口 地址完全一致，而非仅前缀相近。域名差异是误入的主要原因。</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+            <span><strong>连接方式正确：</strong>地址以 https 开头，浏览器地址栏显示常规锁形标识，页面不存在证书警告提示。</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+            <span><strong>页面标题对应：</strong>标签页标题与 91cc官网入口 名称相符，不出现无关品牌名或夸张宣传语。</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+            <span><strong>没有多余要求：</strong>正常入口页面不会在打开瞬间要求填写与访问无关的敏感信息，或要求下载不明来源的安装包。</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+            <span><strong>跳转次数有限：</strong>从点击到进入目标页面，正常应在一两次跳转内完成；连续多次跳转到陌生域名，应视为异常。</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">常见问题</div>
+        <h2>关于 91cc官网入口 的高频疑问</h2>
+        <p>下面四个问题来自访问者最常遇到的情形，回答以可核对的现象为主，不涉及超出本页范围的承诺。</p>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3>搜索不到 91cc官网入口 怎么办？</h3>
+          <p>先核对拼写是否完整，再尝试换用不同的搜索引擎或直接输入已记录的地址。若多个渠道都无结果，说明该地址当前可能无法访问，建议暂缓操作并等待一段时间后重试。</p>
+        </article>
+        <article class="faq-item">
+          <h3>打开后页面打不开或加载缓慢？</h3>
+          <p>可先检查本地网络，再刷新页面或更换浏览器尝试。若其他网站访问正常而该入口持续无响应，问题更可能出在入口一侧，此时重复点击并不会改善结果。</p>
+        </article>
+        <article class="faq-item">
+          <h3>手机和电脑访问 91cc官网入口 有区别吗？</h3>
+          <p>入口地址本身通常一致，区别在于页面在不同屏幕下的排版。手机端建议横向持握或放大查看地址栏，确认域名后再继续操作。</p>
+        </article>
+        <article class="faq-item">
+          <h3>保存的旧地址还能用吗？</h3>
+          <p>旧地址是否可用取决于入口状态，本页无法代为确认。稳妥的做法是每次使用前看一眼地址栏，与记录比对一致再进入。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide" style="padding-top:0">
+    <div class="wrap">
+      <div class="guide">
+        <div>
+          <div class="sec-tag" style="color:#8fded1">使用须知</div>
+          <h2>把 91cc官网入口 存好，比反复搜索更省事</h2>
+          <p>入口类页面最常见的困扰不是“找不到”，而是“找到很多个”。与其每次依赖搜索结果，不如在首次确认 91cc官网入口 可用之后，立刻建立自己的记录：浏览器书签、手机备忘录、或一份简单的地址清单，任选其一即可。</p>
+          <p>记录时建议同时写明核对日期。日期能帮助你在下次访问前判断记录是否仍然新鲜，也能在地址发生变化时快速定位问题。</p>
+          <p class="note">本页仅提供入口查找与核对的方法说明，不代管账户、不收集个人信息，也不对第三方页面内容作任何担保。</p>
+        </div>
+        <div class="dl-box">
+          <a class="btn btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11M7 12l5 5 5-5"/><path d="M5 20h14"/></svg>
+            下载
+          </a>
+          <small>入口核对清单（整理中）</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  <section id="related" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">相关内容</div>
+        <h2>与 91cc官网入口 相关的几条延伸线索</h2>
+        <p>入口问题往往牵涉到记录、核对与访问习惯三件事，下面几组内容可以配合前面的路径一起使用。</p>
+      </div>
+      <div class="rel-grid">
+        <article class="rel-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/></svg></div>
+          <h3>入口地址记录</h3>
+          <p>把确认过的 91cc官网入口 地址与核对日期写在同一处，方便日后比对。</p>
+        </article>
+        <article class="rel-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+          <h3>名称检索技巧</h3>
+          <p>保留完整关键词再搜索，比只输入前缀更容易命中正确的 91cc官网入口。</p>
+        </article>
+        <article class="rel-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M4 10h16M9 6V3M15 6V3"/></svg></div>
+          <h3>访问时间习惯</h3>
+          <p>集中时段访问容易出现加载变慢，换个时间重试往往比反复刷新更有效。</p>
+        </article>
+        <article class="rel-card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1f9d8f" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 8-4.5-.5-8-3-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>安全核对习惯</h3>
+          <p>看域名、看连接方式、看页面要求，三点都通过再继续，是低成本的保护。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="91cc官网入口 首页">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1a4358"/>
+            <path d="M18 40V24h10c6 0 9 3 9 8s-3 8-9 8H18z" fill="none" stroke="#5fd3c4" stroke-width="4"/>
+            <path d="M40 24l8 16M48 24l-8 16" stroke="#f0b429" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text">91cc官网入口<small>ENTRY GUIDE</small></span>
+        </a>
+        <p>91cc官网入口 导航与访问指引页面，汇总入口查找路径、地址核对方法与常见访问问题说明，帮助访问者按步骤确认后再进入目标页面。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>页面导航</h4>
+          <ul>
+            <li><a href="#access">访问路径</a></li>
+            <li><a href="#check">入口核对</a></li>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="#guide">使用须知</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>延伸内容</h4>
+          <ul>
+            <li><a href="#related">相关内容</a></li>
+            <li><a href="#check">地址核对要点</a></li>
+            <li><a href="#guide">记录与保存</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 91cc官网入口 · 入口指引页</span>
+      <span>本页仅提供方法说明，不代管账户、不收集个人信息</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
